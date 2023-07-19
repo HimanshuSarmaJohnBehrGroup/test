@@ -1,4 +1,4 @@
-tedconst express = require('express');
+const express = require('express');
 const socketio = require('socket.io');
 const cors = require('cors');
 const mongoose = require('mongoose');
@@ -64,7 +64,7 @@ const init = async () => {
     const coll1Model = mongoose.model('coll1', coll1, 'coll1');
 
     const user = await coll1Model.findOneAndUpdate(
-        { _id: '64b2e4d54c8fd79111c32948' },
+        { _id: 'abcd' },
         {
             $set: {
                 field1: [{
@@ -76,7 +76,7 @@ const init = async () => {
         }    
     );
 
-    console.log('useredited', user);
+    console.log('user', user);
 }
 
 init();
