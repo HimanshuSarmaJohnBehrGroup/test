@@ -63,20 +63,20 @@ const init = async () => {
 
     const coll1Model = mongoose.model('coll1', coll1, 'coll1');
 
-    const user = await coll1Model.findOneAndUpdate(
-        { _id: 'abcd' },
-        {
-            $set: {
-                field1: [{
-                    val1: "def",
-                    val2: "abc",
-                    _id: "$field1._id"
-                }]
-            }
-        }    
-    );
+    // const user = await coll1Model.findOneAndUpdate(
+    //     { _id: 'abcd' },
+    //     {
+    //         $set: {
+    //             field1: [{
+    //                 val1: "def",
+    //                 val2: "abc",
+    //                 _id: "$field1._id"
+    //             }]
+    //         }
+    //     }    
+    // );
 
-    console.log('user', user);
+    // console.log('user', user);
 }
 
 init();
